@@ -1,30 +1,102 @@
-# CIFAR-10 CNN Classifier
+# CIFAR-10 Custom CNN Classifier
 
-Work in progress.
+A custom Convolutional Neural Network (CNN) built from scratch in TensorFlow/Keras for image classification on the CIFAR-10 dataset.
 
-Previous experiment:
-- 3 convolutional blocks
-- Batch Normalization
-- Global Average Pooling
-- Data Augmentation
+Unlike transfer learning projects, this model was designed and improved through a series of architecture experiments to understand how network depth and width affect model performance.
 
-Previous Results:
-- Train Accuracy: 75.9%
-- Validation Accuracy: 76.3%
-- Test Accuracy: 76.2%
+---
 
-Current experiment:
-- 6 convolutional blocks(deeper)
-- Batch Normalization
-- Global Average Pooling
-- Data Augmentation
+## Features
 
-Current Results:
-- Train Accuracy: 87.8%
-- Validation Accuracy: 84.8%
-- Test Accuracy: 84.4%
+* Custom CNN architecture (built from scratch)
+* Batch Normalization
+* Data Augmentation
+* Global Average Pooling
+* Dropout Regularization
+* Early Stopping
+* Model Checkpointing
 
-Next Steps:
-- Increase network width
-- Compare wider and deeper architectures
-- Analyze confusion matrix
+---
+
+## Dataset
+
+* CIFAR-10
+* 10 image classes
+* 60,000 RGB images
+* Image size: 32 × 32
+
+---
+
+## Final Architecture
+
+* 6 Convolutional Layers
+* Filter sizes: 48 → 48 → 96 → 96 → 192 → 192
+* Batch Normalization after every convolution
+* ReLU activation
+* Max Pooling
+* Global Average Pooling
+* Dense (128)
+* Dropout (0.1)
+* Softmax Output (10 classes)
+
+---
+
+## Final Results
+
+| Metric              |  Accuracy |
+| ------------------- | --------: |
+| Train Accuracy      | **91.8%** |
+| Validation Accuracy | **87.5%** |
+| Test Accuracy       | **87.4%** |
+
+---
+
+## Key Findings
+
+During this project, multiple CNN architectures were evaluated to study the effect of different design choices.
+
+Major observations include:
+
+* Increasing **network depth** produced the largest improvement in accuracy.
+* Increasing **network width** also improved performance, but less than increasing depth.
+* Lowering the dropout rate alone did not improve the baseline model.
+* Combining increased depth and width produced the best overall performance.
+
+A complete record of every experiment and its conclusions is available in **experiments.md**.
+
+---
+
+## Repository Structure
+
+```
+cnn-cifar10-classifier/
+│
+├── models/
+├── notebooks/
+├── experiment_log.md
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## Future Work
+
+* Train the final architecture for additional epochs using Early Stopping.
+* Analyze model predictions with a confusion matrix.
+* Visualize training and validation learning curves.
+* Deploy the classifier with Streamlit.
+
+---
+
+## Concepts Practiced
+
+* Convolutional Neural Networks (CNNs)
+* Network Depth vs. Width
+* Batch Normalization
+* Dropout Regularization
+* Global Average Pooling
+* Data Augmentation
+* Model Evaluation
+* Experimental Architecture Design
+
