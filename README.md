@@ -40,7 +40,7 @@ Unlike transfer learning projects, this model was designed and improved through 
 * Softmax Output (10 classes)
   
 <p align="center">
-  <img src="images/architecture.jpg" width="500">
+  <img src="images/architecture.jpg" width="450">
 </p>
 
 ---
@@ -56,7 +56,7 @@ Unlike transfer learning projects, this model was designed and improved through 
 ### Test Accuracy Comparison
 
 <p align="center">
-  <img src="images/test_accuracy.jpg" width="500">
+  <img src="images/test_accuracy.png" width="500">
 </p>
 
 Comparison of test accuracy across different CNN architectures. Increasing network depth produced the largest performance improvement, while combining increased depth and width achieved the best overall accuracy (87.4%).
@@ -64,7 +64,7 @@ Comparison of test accuracy across different CNN architectures. Increasing netwo
 ### Train, Validation and Test Accuracy
 
 <p align="center">
-  <img src="images/train_val_test.jpg" width="500">
+  <img src="images/train_val_test.png" width="500">
 </p>
 
 Training, validation, and test accuracy for each experiment. The final model achieved the highest training accuracy while maintaining good generalization.
