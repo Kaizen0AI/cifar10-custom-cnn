@@ -35,7 +35,7 @@ Unlike transfer learning projects, this model was designed and improved through 
 * ReLU activation
 * Max Pooling
 * Global Average Pooling
-* Dense (128)
+* Dense (192)
 * Dropout (0.1)
 * Softmax Output (10 classes)
   
