@@ -38,6 +38,10 @@ Unlike transfer learning projects, this model was designed and improved through 
 * Dense (128)
 * Dropout (0.1)
 * Softmax Output (10 classes)
+  
+<p align="center">
+  <img src="images/architecture.jpg" width="500">
+</p>
 
 ---
 
@@ -48,6 +52,22 @@ Unlike transfer learning projects, this model was designed and improved through 
 | Train Accuracy      | **91.8%** |
 | Validation Accuracy | **87.5%** |
 | Test Accuracy       | **87.4%** |
+
+### Test Accuracy Comparison
+
+<p align="center">
+  <img src="images/test_accuracy.jpg" width="500">
+</p>
+
+Comparison of test accuracy across different CNN architectures. Increasing network depth produced the largest performance improvement, while combining increased depth and width achieved the best overall accuracy (87.4%).
+
+### Train, Validation and Test Accuracy
+
+<p align="center">
+  <img src="images/train_val_test.jpg" width="500">
+</p>
+
+Training, validation, and test accuracy for each experiment. The final model achieved the highest training accuracy while maintaining good generalization.
 
 ---
 
@@ -71,6 +91,7 @@ A complete record of every experiment and its conclusions is available in **expe
 ```
 cnn-cifar10-classifier/
 │
+├── images/
 ├── models/
 ├── notebooks/
 ├── experiment_log.md
@@ -83,8 +104,6 @@ cnn-cifar10-classifier/
 ## Future Work
 
 * Train the final architecture for additional epochs using Early Stopping.
-* Analyze model predictions with a confusion matrix.
-* Visualize training and validation learning curves.
 * Deploy the classifier with Streamlit.
 
 ---
